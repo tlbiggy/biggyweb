@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #121113;
+    background-image: url(/media/5k\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+header{
+    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 2px;
+    
+}
+.logo{
+    
+    letter-spacing: 4px;
+    color: #ffffff;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 12px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 14px;
+}
+.nav-links{
+    display: flex;
+    
+    
+    
+}
+.nav-links a{
+    text-decoration: none;
+    
+    color:#ffffff;
+    letter-spacing: 2px;
+    transition: all calc(0.3s);
+}
+
+.nav-links a:hover{
+    color:#25a6af ;
+    letter-spacing: 1px;
+    
+}
+.nav-links a:active{
+    color:#0b6e29;
+    letter-spacing: 2px;
+}
+li{
+    padding-right: 15px;
+    list-style: none;
+    padding-left: 15px;
+}
+.menuicon{
+    display: none;
+    cursor: pointer;
+}
+.menuicon div{ 
+    height: 3px;
+    width: 25px;
+    background-color:#f7f7f7;
+    margin: 5px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+.menuicon:active{
+    background-color:#959bb334;
+    border-radius: 4px;
+}
+@media screen and (max-width:630px) {
+   body{
+    overflow-x: hidden;
+   }
+    .menuicon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:#0e0b0ba6 ;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links a{
+        letter-spacing: normal;
+        
+    }
+    .nav-links a:hover{
+        color:#25a6af ;
+        letter-spacing: normal;
+        text-decoration: underline;
+    }
+    .nav-links a:active{
+        color:#0b6e29;
+        letter-spacing: 0.5px;
+        
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    
+    
+}
+.nav-active{
+    transform: translateX(0%);
+    
+}
+@keyframes navLinkFade{
+    from{
+       opacity: 0;
+       transform: translateX(50px);
+    }  
+    to{
+       opacity: 1;
+       transform: translateX(0px);
+    } 
+   }
+   .toggle .line1{
+    transform: rotate(-45deg )translate(-5px,6px);
+   }
+   .toggle .line2{
+    opacity: 0;
+   }
+   .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+   }
+   .video{
+    size: 100vh;
+   }
+   img{
+    height: 400px;
+    
+    
+   }
+   .text-image{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+    justify-content:space-around;
+   }
+   h1{
+    margin-top: 100px;
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+   }
+    @keyframes glow {
+        from {
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60000, 0 0 20px #e60000, 0 0 25px #e60000, 0 0 30px #e60000, 0 0 35px #e60000;
+        }
+        to {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60000, 0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
+        }
+      }
+      
+      .spotify{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(238, 236, 236);
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding-right: 72px;
+        padding-left: 72px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: ease 0.3s;
+        border-style: solid;
+        border-color: #ffffff;
+        background-color: #3432369f;
+      }
+      .spotify:hover{
+        background-color: #00000073;
+        
+      }
+      .spotify:active{
+        background-color: #0a7a31;
+      }
+      .deezer{
+        border-style: solid;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        color: rgb(238, 236, 236);
+        border-radius: 10px;
+        padding-right: 72px;
+        padding-left: 72px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        transition: ease 0.3s;
+        background-color: #3432369f;
+      }
+      .deezer:hover{
+        background-color: #00000073;
+        
+      }
+      .youtube{
+        background-color: #3432369f;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 20px;
+        text-decoration: none;
+        border-style: solid;
+        color: rgb(238, 236, 236);
+  border-radius: 10px;
+  padding-right: 72px;
+  padding-left: 72px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  transition: ease 0.3s;
+  margin-bottom: 20px;
+      }
+      .youtube:hover{
+        background-color: #00000073;
+        
+      }
+      .y-m{
+        background-color: #3432369f;
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(238, 236, 236);
+  border-radius: 10px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        transition: ease 0.3s;
+        border-style: solid;
+        }
+        .y-m:hover{
+            background-color: #00000073;
+            
+          }
+      .a-m{
+        background-color: #3432369f;
+        margin-bottom: 20px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(238, 236, 236);
+  border-radius: 10px;
+  padding-right: 55px;
+  padding-left: 58px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-style: solid;
+  transition: ease 0.3s;
+
+      }
+      
+    .a-m:hover{
+        
+            background-color: #00000073;
+            
+          
+    }
+      .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        
+        
+      }
+      .sp{
+        height: 40px;
+      }
+      .yt{
+        height: 40px;
+      }
+      .dez{
+        height: 40px;
+      }
+      .am{
+        height: 40px;
+      }
+    .ym{
+        height: 40px;
+    }
+    
